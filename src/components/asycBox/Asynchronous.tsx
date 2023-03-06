@@ -74,6 +74,7 @@ export default function Asynchronous() {
         <Autocomplete
             // defaultValue={{ "The Godfather"}}
             // value={{inputAutoValue}}
+            inputValue={inputAutoValue}
 
             style={{ backgroundColor: 'white', color: 'black', border: 'yellow' }}
             id="asynchronous-demo"
@@ -89,6 +90,8 @@ export default function Asynchronous() {
                 console.log('newInputValue = ', newInputValue)
                 setInputValue(newInputValue);
                 console.log('inputValue = ', inputValue)
+                setInputAutoValue(newInputValue)
+                console.log('inputAutoValue = ', inputAutoValue)
 
             }}
             isOptionEqualToValue={(option, value) => option.Title === value.Title}

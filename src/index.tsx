@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import MovieContext from './components/MovieContext'
 
 function Main(){
-    const [inputAutoValue, setInputAutoValue] = useState<string | null>(null);
+    const [inputAutoValue, setInputAutoValue] = useState<string  | undefined>(undefined);
 
     return(
         <MovieContext.Provider value={{inputAutoValue, setInputAutoValue}}>

@@ -30,10 +30,10 @@ const iUserContextState = {
 }
 
 const MovieContext = createContext<{
-    inputAutoValue: string | null,
-    setInputAutoValue: (inputAutoValue:string) => void
+    inputAutoValue: string | undefined,
+    setInputAutoValue: (inputAutoValue:string  | undefined) => void
 }>({
-    inputAutoValue: null,
+    inputAutoValue:undefined ,
     setInputAutoValue: () => undefined
 })
 export default MovieContext
