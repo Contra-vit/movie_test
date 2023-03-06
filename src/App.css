@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --md-dark-color: #1d1d1d;
+  --dark-color: #171717;
+  --light-dark-color: #292929;
+  --yellow-color: #d4aa11;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  font-family: 'Inter', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+/*img{*/
+/*  width: 100%;*/
+/*  display: block;*/
+/*}*/
+.wrapper{
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--dark-color);
+}
+.wrapper .container{
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.search-container{
+
+  background-color: var(--md-dark-color);
+  /*height: 180px;*/
+  /*display: -webkit-box;*/
+  /*display: -ms-flexbox;*/
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.search-element{
+
+}
+.logo{
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--light-dark-color);
+}
+.logo p{
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
+.logo p span{
+  color: var(--yellow-color);
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

@@ -1,0 +1,29 @@
+
+
+
+.about_main{
+  /*position: absolute;*/
+ margin: 5px;
+}
+.about_container_container{
+  display: flex;
+
+}
+.about_buttonSearch{
+
+}
+.about_movie_container{
+
+  /*height: 100% ;*/
+  display: flex;
+  flex-direction: row;
+
+}
+.about_plot{
+
+}
+.about_movie_text {
+  margin: 5px;
+  padding: 5px;
+  color: white;
+}

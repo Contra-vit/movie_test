@@ -1,24 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Asynchronous from "./components/asycBox/Asynchronous";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import About from "./components/about/About";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className='wrapper'>
+            {/*logo*/}
+            <div className='logo'>
+                <div className='container'>
+                    <p> Movie  OMDB</p>
+                </div>
+            </div>
+            {/*end of logo*/}
+            {/*search container*/}
+            <div className="search-container">
+                <div className="search-element">
+                    <Router>
+                        <Routes>
+                            <Route path="/" element={<Asynchronous />} />
+                            <Route path="/about" element ={<About link={'gooo'}/> } />
+                        </Routes>
+                    </Router>
+                </div>
+
+            </div>
+            {/* end of search container*/}
+
+
+
+            {/*<FreeSoloCreateOption/>*/}
+        </div>
+
+
+        {/*<Asynchronous/>*/}
     </div>
   );
 }
