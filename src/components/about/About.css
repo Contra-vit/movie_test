@@ -19,6 +19,10 @@
   flex-direction: row;
 
 }
+.about_movie_img {
+  width: 270px;
+  height: 400px;
+}
 .about_plot{
 
 }
@@ -26,4 +30,26 @@
   margin: 5px;
   padding: 5px;
   color: white;
+}
+
+.about_buttonSearch {
+  margin: 10px;
+}
+.about_button {
+ color: black;
+  background-color:white;
+}
+@media (max-width: 450px){
+  .about_movie_container{
+
+    /*height: 100% ;*/
+    display: flex;
+    flex-direction: column;
+
+  }
+  .about_movie_img {
+    width: 135px;
+    height: 200px;
+  }
+
 }

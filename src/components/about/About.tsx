@@ -21,41 +21,26 @@ const About = ({link}: AboutProps) => {
     let movieId = aboutUrl.split('?')[1]; // grabs the part on the right of the ?
     console.log(movieId)
     const linkMovieAbout = `https://omdbapi.com/?apikey=ea5666d3&i=${movieId}&plot=full`;
-
-
         useEffect( () => {
-
        async function  fetchMovie<IAboutMovie>() {
             try{
                 const response = await fetch(linkMovieAbout)
-                console.log(response)
-
                 const data = await response.json()
-                console.log( data)
                 setDataMovie(data)
             }catch (e){
-                console.error(e)
             }
         }
         fetchMovie()
-
-
 },[])
-
-    console.log(dataMovie)
-
     if(navToSearch){
         return   <Navigate to={'/'}/>
     }
-
-
     return (
         <div className='about_main'>
             <div className='about_main_container'>
-
                  <div className='about_movie_container'>
                      <div>
-                         <img src={dataMovie?.Poster}/>
+                         <img className='about_movie_img' src={dataMovie?.Poster != "N/A" ? dataMovie?.Poster: 'image_not_found.png'}/>
                      </div>
                      <div className='about_movie_text'>
                          <div > Year: {dataMovie?.Year}</div>
@@ -65,14 +50,13 @@ const About = ({link}: AboutProps) => {
                 <div className='about_buttonSearch'>
                     {/*<button  onClick={ () => {setNavToSearch(true)}}>Back to search</button>*/}
                     <Stack spacing={2} direction="row">
-                        <Button style={{color:'white', }} variant="outlined" onClick={ () => {setNavToSearch(true)}}>Back to search</Button>
+                        <Button style={{color: 'black', background:'white'}}   variant="contained" onClick={ () => {setNavToSearch(true)}}>Back to search</Button>
                     </Stack>
                 </div>
             </div>
         </div>
     );
 };
-
 export default About;
 
 

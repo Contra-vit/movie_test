@@ -12,7 +12,7 @@ function App() {
             {/*logo*/}
             <div className='logo'>
                 <div className='container'>
-                    <p> Movie  OMDB</p>
+                    <p> Movie  OMDB </p>
                 </div>
             </div>
             {/*end of logo*/}
